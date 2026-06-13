@@ -19,7 +19,7 @@ const certificationsData = [
       "OCI AI Services",
     ],
 
-    certificate: "public/certificates/oracle-ai-foundations.pdf",
+    certificate: "certificates/oracle-ai-foundations.pdf",
   },
 
   {
@@ -43,7 +43,7 @@ const certificationsData = [
       "Professional Development",
     ],
 
-    certificate:"public/certificates/TCSION_carrer_professional_certificate.pdf",
+    certificate:"certificates/TCSION_carrer_professional_certificate.pdf",
   },
 
   {
@@ -67,7 +67,7 @@ const certificationsData = [
       "Personal Growth",
     ],
 
-    certificate: "public/certificates/McKinsey.orgForward20251220-30-ewbosw.pdf",
+    certificate: "certificates/McKinsey.orgForward20251220-30-ewbosw.pdf",
   },
 
   {
@@ -91,7 +91,7 @@ const certificationsData = [
       "Automation",
     ],
 
-    certificate: "public/certificates/PythonEssentials1Update20250419-27-h5c2e3.pdf",
+    certificate: "certificates/PythonEssentials1Update20250419-27-h5c2e3.pdf",
   },
 
   {
@@ -113,7 +113,7 @@ const certificationsData = [
       "Network Fundamentals",
     ],
 
-    certificate: "public/certificates/NetworkingBasicsUpdate20250418-26-g2rhuq.pdf",
+    certificate: "certificates/NetworkingBasicsUpdate20250418-26-g2rhuq.pdf",
   },
 
   {
@@ -135,7 +135,7 @@ const certificationsData = [
       "Security Monitoring",
     ],
 
-    certificate: "public/certificates/deloite.pdf",
+    certificate: "certificates/deloite.pdf",
   },
 
   {
@@ -157,7 +157,7 @@ const certificationsData = [
       "Industry 4.0",
     ],
 
-    certificate: "public/certificates/Cisco_introduction_to_IOT.pdf",
+    certificate: "certificates/Cisco_introduction_to_IOT.pdf",
   },
 
   {
@@ -181,7 +181,7 @@ const certificationsData = [
       "Repository Management",
     ],
 
-    certificate:" public/certificates/git&github-1.pdf",
+    certificate:" certificates/git&github-1.pdf",
   },
 ];
 
