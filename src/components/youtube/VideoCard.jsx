@@ -9,20 +9,20 @@ export default function VideoCard({ video }) {
       <img
         src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
         alt={video.title}
-        className="w-full h-48 object-cover"
+        className="w-full h-40 md:h-48 object-cover"
       />
 
-      <div className="p-4">
+      <div className="p-4 md:p-5">
 
-        <p className="text-sm text-gray-500">
+        <p className="text-xs md:text-sm text-gray-500">
           {video.category}
         </p>
 
-        <h3 className="font-semibold mt-2">
+        <h3 className="font-semibold text-sm md:text-base mt-2 line-clamp-2">
           {video.title}
         </h3>
 
-        <p className="mt-3 text-black font-medium">
+        <p className="mt-3 text-sm md:text-base text-black font-medium">
           Watch on YouTube →
         </p>
 

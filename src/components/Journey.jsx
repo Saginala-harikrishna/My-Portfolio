@@ -45,25 +45,78 @@ const timeline = [
 
 export default function Journey() {
   return (
-    <section className="py-24">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-12 md:py-24">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
 
         {/* Heading */}
-        <div className="text-center mb-20">
-          <h2 className="text-5xl font-bold">
+
+        <div className="text-center mb-10 md:mb-20">
+
+          <h2 className="text-3xl md:text-5xl font-bold">
             My Journey
           </h2>
 
-          <p className="mt-4 text-gray-600 text-lg">
+          <p className="mt-3 md:mt-4 text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
             A journey of learning, building, and solving real-world problems.
           </p>
+
         </div>
 
-        {/* Timeline */}
-        <div className="relative">
+        {/* Mobile Timeline */}
 
-          {/* Center Line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gray-300 transform -translate-x-1/2"></div>
+        <div className="block md:hidden relative">
+
+          <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-gray-300" />
+
+          <div className="space-y-6">
+
+            {timeline.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 30,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                transition={{
+                  duration: 0.5,
+                }}
+                className="relative pl-12"
+              >
+                <div className="absolute left-0 top-2 w-8 h-8 rounded-full border-2 border-black bg-white flex items-center justify-center text-xs font-bold z-10">
+                  {index + 1}
+                </div>
+
+                <div className="bg-white border rounded-xl p-4 shadow-sm">
+
+                  <h3 className="text-lg font-semibold">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-sm text-gray-600 mt-1">
+                    {item.description}
+                  </p>
+
+                </div>
+
+              </motion.div>
+            ))}
+
+          </div>
+
+        </div>
+
+        {/* Desktop Timeline */}
+
+        <div className="hidden md:block relative">
+
+          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gray-300 transform -translate-x-1/2" />
 
           <div className="space-y-10">
 
@@ -84,7 +137,6 @@ export default function Journey() {
                 }}
                 transition={{
                   duration: 0.7,
-                  ease: "easeOut",
                 }}
                 className={`relative flex items-center ${
                   index % 2 === 0
@@ -93,28 +145,11 @@ export default function Journey() {
                 }`}
               >
 
-                {/* Timeline Circle */}
-                <motion.div
-                  initial={{
-                    scale: 0,
-                  }}
-                  whileInView={{
-                    scale: 1,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  transition={{
-                    delay: 0.2,
-                    duration: 0.4,
-                  }}
-                  className="absolute left-1/2 -translate-x-1/2 w-10 h-10 bg-white border-4 border-black rounded-full z-10 flex items-center justify-center font-bold text-sm"
-                >
+                <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 bg-white border-4 border-black rounded-full z-10 flex items-center justify-center font-bold text-sm">
                   {index + 1}
-                </motion.div>
+                </div>
 
-                {/* Card */}
-                <div className="w-[45%] bg-white border rounded-2xl p-6 shadow-sm hover:shadow-xl transition duration-300">
+                <div className="w-[45%] bg-white border rounded-2xl p-6 shadow-sm hover:shadow-xl transition">
                   <h3 className="text-xl font-semibold">
                     {item.title}
                   </h3>

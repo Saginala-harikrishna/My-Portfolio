@@ -7,17 +7,17 @@ export default function Experience() {
     useState(experienceData[0]);
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-20">
+    <div className="max-w-6xl mx-auto px-4 md:px-6 py-10 md:py-20">
 
       {/* Hero */}
 
-      <div className="text-center mb-16">
+      <div className="text-center mb-10 md:mb-16">
 
-        <h1 className="text-6xl font-bold">
+        <h1 className="text-4xl md:text-6xl font-bold">
           Experience
         </h1>
 
-        <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
+        <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
           My professional journey across defense research,
           healthcare AI, and software development.
         </p>
@@ -26,7 +26,7 @@ export default function Experience() {
 
       {/* Company Selector */}
 
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
+      <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-12">
 
         {experienceData.map((exp) => (
 
@@ -35,7 +35,7 @@ export default function Experience() {
             onClick={() =>
               setSelectedExperience(exp)
             }
-            className={`px-6 py-3 rounded-xl border transition ${
+            className={`px-4 md:px-6 py-2 md:py-3 text-sm md:text-base rounded-xl border transition ${
               selectedExperience.id === exp.id
                 ? "bg-black text-white"
                 : "hover:bg-gray-100"
@@ -48,43 +48,43 @@ export default function Experience() {
 
       </div>
 
-      {/* Selected Experience */}
+      {/* Experience Card */}
 
-      <div className="space-y-8">
+      <ExperienceCard exp={selectedExperience} />
 
-  <ExperienceCard exp={selectedExperience} />
+      {/* Certificate */}
 
-  {/* Certificate Section */}
+      <div className="border rounded-2xl md:rounded-3xl p-5 md:p-8 mt-6 md:mt-8">
 
-  <div className="border rounded-3xl p-8">
+        <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">
+          Certificate
+        </h2>
 
-    <h2 className="text-2xl font-bold mb-6">
-      Certificate
-    </h2>
+        {selectedExperience.certificate ? (
 
-    {selectedExperience.certificate ? (
+          <img
+            src={selectedExperience.certificate}
+            alt="Certificate"
+            className="w-full rounded-xl md:rounded-2xl border"
+          />
 
-  <img
-    src={selectedExperience.certificate}
-    alt="Certificate"
-    className="w-full rounded-2xl border"
-  />
+        ) : (
 
-) : (
+          <div className="h-[250px] md:h-[400px] border-2 border-dashed rounded-xl md:rounded-2xl flex items-center justify-center">
 
-  <div className="h-[400px] border-2 border-dashed rounded-2xl flex items-center justify-center">
-    <div className="text-center">
-      <h3 className="text-xl font-semibold">
-        Certificate Will Be Uploaded Soon
-      </h3>
-    </div>
-  </div>
+            <div className="text-center">
 
-)}
+              <h3 className="text-lg md:text-xl font-semibold">
+                Certificate Will Be Uploaded Soon
+              </h3>
 
-  </div>
+            </div>
 
-</div>
+          </div>
+
+        )}
+
+      </div>
 
     </div>
   );
