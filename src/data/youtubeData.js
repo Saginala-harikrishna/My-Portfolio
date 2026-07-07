@@ -1,5 +1,5 @@
 const youtubeData = {
-  channelName: "Eric Hari",
+  channelName: "UpdatesWithKrishna",
   subscribers: "Growing",
   videos: "50+",
   contentTypes: [

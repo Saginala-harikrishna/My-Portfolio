@@ -39,7 +39,7 @@ const experienceData = [
     ],
 
     
-certificate: null,
+certificate: "/certificates/drdo_certificate.jpeg",
 
   },
 
@@ -120,7 +120,7 @@ certificate: null,
       "Worked on real-world projects",
     ],
 
-    certificate: null,
+    certificate: "/certificates/CodeOn_internship_certificate.png",
   },
 ];
 
